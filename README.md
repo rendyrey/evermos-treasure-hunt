@@ -17,7 +17,7 @@ From the starting position, the user must navigate in a specific order:
 - and the third move have to down (can move down more than 1 time)
 
 The program must output a list of probable coordinate points where the treasure might be located.
-Bonus points: display the grid with all the probable treasure locations marked with a `$` symbol.
+display the grid with the probable treasure locations marked with a `$` symbol.
 
 
 # how to run
