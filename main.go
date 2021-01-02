@@ -31,7 +31,7 @@ func main() {
 		{"#", "#", "#", "#", "#", "#", "#", "#"},
 	}
 
-	// create all probable treasure position
+	// create all probable treasure position coordinate
 	treasureProbablePos := [17][2]int{
 		{1, 1}, {1, 2}, {1, 3}, {1, 4}, {1, 5}, {1, 6},
 		{2, 1}, {2, 5}, {2, 6},
@@ -63,8 +63,20 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+
+	fmt.Println("=== List of probable coordinate where treasure might be located ===")
+	for i := 0; i < 17; i++ {
+		for j := 0; j < 2; j++ {
+			fmt.Printf("%d ", treasureProbablePos[i][j])
+		}
+		fmt.Printf("\n")
+	}
+	fmt.Println("====================================================================\n")
+
 	printPattern(newPattern) // print the initial pattern
+
 	fmt.Println("Enter Up, Right, Down key or press ESC button to quit")
+
 	lastMove := "start" // save the last move
 
 keyPressListenerLoop:
